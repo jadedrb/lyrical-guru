@@ -27,17 +27,19 @@ export class Provider extends Component {
     }
 
     setTypeState = (type, res, track_id) => {
+        console.log('setTypeState', type)
         if (type === 'results') this.setState({results: res.data.message.body.track_list, loading: false})
-        else this.setState({lyrics: [...this.state.lyrics, {...res.data.message.body.lyrics, track_id}] })
+        else this.setState({lyrics: [...this.state.lyrics, {...res.data.message.body.lyrics, track_id}], loading: false })
+        console.log(this.state)
     }
 
     apiCall = ({type, input}) => {
         let cors = 'https://cors-anywhere.herokuapp.com/'
         let startApi = 'https://api.musixmatch.com/ws/1.1/'
         let { typeSearch, moreDetails } = this.setTypeText(type)
-
+        console.log('apiCall')
         this.setState({loading: true})
-        console.log(this.state)
+        console.log(cors + startApi + typeSearch + input + moreDetails + process.env.REACT_APP_KEY)
         axios
             .get(cors + startApi + typeSearch + input + moreDetails + process.env.REACT_APP_KEY)
             .then(res => this.setTypeState(type, res, input))

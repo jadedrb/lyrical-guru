@@ -30,3 +30,10 @@
 .suggested:active {
     border: 4px solid lime;
 }
+.choice {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 0;
+    align-items: center;
+    border: 1px solid black;
+}
