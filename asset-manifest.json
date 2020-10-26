@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/lyrical-guru/static/css/main.73cba99c.chunk.css",
+    "main.js": "/lyrical-guru/static/js/main.4bfffc32.chunk.js",
+    "main.js.map": "/lyrical-guru/static/js/main.4bfffc32.chunk.js.map",
+    "runtime-main.js": "/lyrical-guru/static/js/runtime-main.2dc7e8bb.js",
+    "runtime-main.js.map": "/lyrical-guru/static/js/runtime-main.2dc7e8bb.js.map",
+    "static/js/2.7373f711.chunk.js": "/lyrical-guru/static/js/2.7373f711.chunk.js",
+    "static/js/2.7373f711.chunk.js.map": "/lyrical-guru/static/js/2.7373f711.chunk.js.map",
+    "index.html": "/lyrical-guru/index.html",
+    "precache-manifest.2e08fc5953c28b93612715a6b466a8fd.js": "/lyrical-guru/precache-manifest.2e08fc5953c28b93612715a6b466a8fd.js",
+    "service-worker.js": "/lyrical-guru/service-worker.js",
+    "static/css/main.73cba99c.chunk.css.map": "/lyrical-guru/static/css/main.73cba99c.chunk.css.map",
+    "static/js/2.7373f711.chunk.js.LICENSE.txt": "/lyrical-guru/static/js/2.7373f711.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2dc7e8bb.js",
+    "static/js/2.7373f711.chunk.js",
+    "static/css/main.73cba99c.chunk.css",
+    "static/js/main.4bfffc32.chunk.js"
+  ]
+}
