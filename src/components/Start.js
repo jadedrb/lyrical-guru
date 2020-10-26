@@ -23,7 +23,7 @@ function Start() {
             setGame(true)
             typeOfQuestion()
         }
-    }, [context])
+    }, [context.state.lyrics])
 
     const randomIndexOfArr = arr => Math.floor(Math.random() * arr.length)
 
@@ -42,7 +42,7 @@ function Start() {
             finalSelection.push(pool.splice(randomIndexOfArr(pool),1))
             atMostFive--
         }
-        let findAnswerLyrics = finalSelection[randomIndexOfArr(finalSelection)][0]['track_id']
+        let findAnswerLyrics = finalSelection.length && finalSelection[randomIndexOfArr(finalSelection)][0]['track_id']
         console.log(findAnswerLyrics)
         let foundAnswer = lyrics.filter(t => t.track_id === findAnswerLyrics)
         setPossibleSongs(finalSelection)

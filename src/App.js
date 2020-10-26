@@ -1,30 +1,18 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
-import { Provider, Consumer } from './context';
-import { BrowserRouter as Router, Link, Route, Switch, Redirect } from 'react-router-dom';
+import { Provider } from './context';
 
-import Search from './components/Search';
-import Choices from './components/Choices';
-import Start from './components/Start';
+import NavBar from './components/NavBar'
 
-function App() {
+class App extends Component {
 
-  return (
-    <Provider>
-      <Router>
-        <Link to='/'>Lyrical Guru</Link>
-        <Link to='/choices'>Choices</Link>
-        <Consumer>
-        {v => v.state.trackList.length >= 3 ? <Link to='/start'>Start</Link> : `${v.state.trackList.length}/3`}
-        </Consumer>
-        <Switch>
-          <Route exact path='/' component={Search} />
-          <Route path='/choices' component={Choices} />
-          <Route path='/start' component={Start} />
-        </Switch>
-      </Router>
-    </Provider>
-  );
+  render() {
+    return (
+      <Provider>
+        <NavBar/>
+      </Provider>
+    );
+  }
 }
 
 export default App;

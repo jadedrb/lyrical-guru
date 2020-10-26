@@ -18,8 +18,10 @@ function Search() {
     context.apiCall({type: 'results', input})
   }
 
+  let classN = results.length || loading ? 'none' : 'submit-form-button'
+
   return (
-      <form onSubmit={onSubmit}>
+      <form onSubmit={onSubmit} className={classN}>
         <input value={input} onChange={onChange}></input>
         <button>SUBMIT</button> <br/><br/>
         {loading ? 'Loading...' : ''}

@@ -37,3 +37,22 @@
     align-items: center;
     border: 1px solid black;
 }
+.default-page {
+    font-size: 50pt;
+    font-family: 'Grandstander', cursive;
+    border: 1px solid black;
+    border-radius: 20px;
+    text-align: center;
+    margin-top: 50%;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+.submit-form-button {
+    display: flex;
+    height: 30px;
+    justify-content: center;
+}
+.starter-text {
+    text-align: center;
+}
+

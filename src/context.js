@@ -8,7 +8,9 @@ export class Provider extends Component {
         loading: undefined,
         results: [],
         trackList: [],
-        lyrics: []
+        lyrics: [],
+        correct: 0,
+        timeBonus: 0
     }
     /* DOCS: https://developer.musixmatch.com/documentation/api-reference/track-chart-get */
     /* track.lyrics.get?track_id= ...trackList[0].track_id...  &apikey= */
