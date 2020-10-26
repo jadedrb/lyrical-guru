@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Link, Route, Switch, Redirect } from 'react-router-dom';
 import { Context } from '../context';
 
 import Search from './Search';
@@ -11,6 +11,7 @@ const NavBar = () => {
     let startButton = context.state.trackList.length >= 3 ? <Link to='/start'>Start</Link> : `${context.state.trackList.length}/3`
     let results = context.state.results.length || context.state.loading ? true : false
     let bigText = results ? <Link to='/'>Lyrical Guru</Link> : <div className='default-page'>Lyrical Guru</div>
+    let choices = context.state.trackList.length
 
     let starterPageText = (
         <p className='starter-text'>
@@ -25,6 +26,9 @@ const NavBar = () => {
     let displayStarterPageText = results ? <Link to='/choices'>Choices</Link> : starterPageText
     let displayStartButton = results ? startButton : ''
     let classN = results ? 'normal-nav' : null;
+    let redirect = !results && !choices && <Redirect from="/choices" to="/" />
+
+    console.log(context)
 
     return (
         <Router>
@@ -34,6 +38,7 @@ const NavBar = () => {
             {displayStartButton}
             </div>  
             <Switch>
+                {redirect}
                 <Route exact path='/' component={Search} />
                 <Route path='/choices' component={Choices} />
                 <Route path='/start' component={Start} />

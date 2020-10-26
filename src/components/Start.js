@@ -52,8 +52,12 @@ function Start() {
 
     return(
         <div>
-            {game ? 'Quiz' : 'Loading...'}
-            {answer.length ? <Answers possible={possibleSongs} answer={answer}/> : ''}
+            {game ? '' : 'Loading...'}
+            {answer.length ? <Answers 
+                                possible={possibleSongs} 
+                                answer={answer}
+                                selectPossibleSongs={selectPossibleSongs}/> 
+                            : ''}
         </div>
     )
 }

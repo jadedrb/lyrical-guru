@@ -20,6 +20,8 @@ function Search() {
 
   let classN = results.length || loading ? 'submit-form-button-results' : 'submit-form-button'
 
+  console.log(results)
+
   return (
       <form onSubmit={onSubmit} className={classN}>
         <input value={input} onChange={onChange}></input>

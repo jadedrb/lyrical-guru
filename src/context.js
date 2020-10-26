@@ -10,6 +10,9 @@ export class Provider extends Component {
         trackList: [],
         lyrics: [],
         correct: 0,
+        points: 0,
+        correctStreak: 0,
+        pointsStreak: 0,
         timeBonus: 0
     }
     /* DOCS: https://developer.musixmatch.com/documentation/api-reference/track-chart-get */
