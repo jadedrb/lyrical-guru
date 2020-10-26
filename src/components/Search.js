@@ -18,7 +18,7 @@ function Search() {
     context.apiCall({type: 'results', input})
   }
 
-  let classN = results.length || loading ? 'none' : 'submit-form-button'
+  let classN = results.length || loading ? 'submit-form-button-results' : 'submit-form-button'
 
   return (
       <form onSubmit={onSubmit} className={classN}>
